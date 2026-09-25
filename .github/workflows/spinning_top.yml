@@ -1,0 +1,91 @@
+name: Spinning Top Scan
+
+on:
+  schedule:
+    - cron: "15 0 * * *"   # daily  - 00:15 UTC every day (after the 1D close)
+    - cron: "15 0 * * 1"   # weekly - 00:15 UTC Mondays (after the 1W close)
+    - cron: "15 0 1 * *"   # monthly- 00:15 UTC on the 1st (after the 1M close)
+  workflow_dispatch:        # manual run - pick a timeframe below
+    inputs:
+      timeframe:
+        description: "Timeframe to scan"
+        type: choice
+        default: daily
+        options: [daily, weekly, monthly]
+      dry_run:
+        description: "Dry run - print the message in the job log, send nothing, write nothing"
+        type: boolean
+        default: false
+
+# Allow the job to commit signals.jsonl / archive back to the repo.
+permissions:
+  contents: write
+
+# Shared with the GFS workflow so the two commit-backs never race
+# (also serializes overlapping schedules such as Monday the 1st).
+concurrency:
+  group: gfs-spinning-top-scan
+  cancel-in-progress: false
+
+defaults:
+  run:
+    working-directory: spinning-top-scanner
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Resolve timeframe
+        id: tf
+        run: |
+          INPUT="${{ github.event.inputs.timeframe }}"
+          SCHED="${{ github.event.schedule }}"
+          if [ -n "$INPUT" ]; then
+            case "$INPUT" in
+              weekly)  TF=1w ;;
+              monthly) TF=1M ;;
+              *)       TF=1d ;;
+            esac
+          else
+            case "$SCHED" in
+              "15 0 * * 1") TF=1w ;;
+              "15 0 1 * *") TF=1M ;;
+              *)            TF=1d ;;
+            esac
+          fi
+          echo "tf=$TF" >> "$GITHUB_OUTPUT"
+          echo "Resolved timeframe: $TF"
+
+      - name: Run scanner
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}          # optional free Demo key
+          TIMEFRAME: ${{ steps.tf.outputs.tf }}
+          DRY_RUN: ${{ inputs.dry_run == true && '1' || '0' }}
+        run: python scanner.py
+
+      - name: Commit signal log + message archive
+        if: ${{ inputs.dry_run != true }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          for f in signals.jsonl alerts_archive.txt; do
+            [ -f "$f" ] && git add "$f"
+          done
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "chore: spinning-top scan (${{ steps.tf.outputs.tf }}) - update log + archive [skip ci]"
+            git push || (git pull --rebase && git push)
+          fi
