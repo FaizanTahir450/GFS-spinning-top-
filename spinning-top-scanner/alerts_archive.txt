@@ -1,0 +1,19 @@
+🕯️ Spinning Top Scan — Daily — 26 Sep 2026
+
+Candle checked: daily candle of Fri 25 Sep 2026 UTC — closed candles only, the forming candle is ignored
+
+Rule: body ≤30% of range · wicks ≥1× body & ≥20% of range · volume ≥1.5× avg(20) · at a 10-candle high or low
+
+Universe: 670 pairs (Binance 396 · Bitget 213 · MEXC 57 · KuCoin 4) · top-500 not covered: 51 · too little history: 3 · stale/halted: 0
+
+Spinning tops on high volume (6), biggest volume first:
+  • XPL  vol 4.0×  body 20%  ⬆ 10-bar high  ↑ +20.2% into it  @ 0.11467  #113
+  • DYM  vol 2.8×  body 16%  ⬆ 10-bar high  ↑ +22.5% into it  @ 0.02073
+  • MANTRA  vol 2.7×  body 2% (doji)  ⬆ 10-bar high  ↑ +8.7% into it  @ 0.00474
+  • XLM  vol 1.8×  body 23%  ⬆ 10-bar high  ↑ +11.0% into it  @ 0.2204  #20
+  • XPR [MEXC]  vol 1.7×  body 15%  ⬇ 10-bar low  ↓ -4.3% into it  @ 0.0024829  #380
+  • BANANAS31  vol 1.5×  body 19%  ⬆ 10-bar high  ↑ +2.8% into it  @ 0.008201  #342
+
+⬆/⬇ = the candle set the highest high / lowest low of the previous 10 candles · ↑ = came after an up-move (watch for a bearish turn) · ↓ = after a down-move (watch for a bullish turn) · % is the close-to-close move over the previous 5 candles
+
+Top-500 coins without a USDT pair on Binance/Bitget/MEXC/KuCoin (51): LEO#18, GT#75, DRV#124, HASH#130, OHM#151, KOGE#174, SHFL#199, BORG#206, BTSE#215, META#233, OZO#249, GRX#252, RLB#253, BC#255, NXM#269, NOPAL#275, SHORT#300, ACRED#304, MAG7.SSI#305, UNT#309, BABYCLAW#?, KNTQ#311, YZY#325, EXOD#328, WM#336, GAL#356, APES#360, DIEM#366, PRIZE#381, TEMPLE#395, MGLOBAL#397, NILA#402, MF-ONE#406, ELG#413, MGLO#419, SWOP#423, MHORSE#427, NOXO#438, VBILL#447, FONQ#450 … +11 more
