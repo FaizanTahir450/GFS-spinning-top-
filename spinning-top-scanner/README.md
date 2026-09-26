@@ -14,9 +14,11 @@ indecision. On high volume after a move it often marks exhaustion.
 | Swing extreme | the candle's high is the highest high, or its low the lowest low, of the previous 10 candles |
 | Candle | the last **closed** candle of the timeframe |
 
-Dojis (body under 10 %) count and are tagged `(doji)`. Each hit shows the
-close-to-close move over the 5 candles before it: `↑` after an up-move (watch
-for a bearish turn), `↓` after a down-move (watch for a bullish turn).
+Hits are split by direction: a spinning top **at the 10-candle high** goes in the
+🔴 bearish section (the up-move is stalling), one **at the 10-candle low** in the
+🟢 bullish section (the sell-off is stalling). Dojis count. The full candle
+details (body %, volume ratio, prior move) are printed in the Actions job log
+and stored in `signals.jsonl`, not sent to Telegram.
 
 **Coverage:** every Binance USDT spot pair, every Bitget USDT spot pair (for the
 coins Binance does not list), plus the CoinGecko top-500 coins by market cap.
@@ -48,22 +50,22 @@ The workflow then runs by itself and commits `signals.jsonl` and
 ```
 🕯️ Spinning Top Scan — Daily — 21 Sep 2026
 
-Candle checked: daily candle of Sun 20 Sep 2026 UTC — closed candles only, the forming candle is ignored
+Candle checked: daily candle of Sun 20 Sep 2026 UTC
 
-Rule: body ≤30% of range · wicks ≥1× body & ≥20% of range · volume ≥1.5× avg(20) · at a 10-candle high or low
+Rule: small body (≤30% of range), wicks on both sides, volume ≥1.5× the 20-candle average, at a 10-candle high or low
 
-Universe: 740 pairs (Binance 480 · Bitget 215 · MEXC 40 · KuCoin 5) · top-500 not covered: 50 · too little history: 4 · stale/halted: 3
+Universe: 670 pairs · Binance 396 · Bitget 213 · MEXC 56 · KuCoin 5
 
-Spinning tops on high volume (3), biggest volume first:
-  • DOGE  vol 3.4×  body 4% (doji)  ⬇ 10-bar low  ↓ -12.1% into it  @ 0.0912  #8
-  • BTC  vol 2.1×  body 12%  ⬆ 10-bar high  ↑ +8.4% into it  @ 61,234  #1
-  • ABC [Bitget]  vol 1.7×  body 22%  ⬆ 10-bar high  ↑ +3.0% into it  @ 0.0123  #412
+🔴 Bearish — spinning top at a 10-candle high, up-move stalling (2):
+  • BTC [Binance]  @ 61,234  #1
+  • ABC [Bitget]  @ 0.0123  #412
 
-⬆/⬇ = the candle set the highest high / lowest low of the previous 10 candles · ↑ = came after an up-move (watch for a bearish turn) · ↓ = after a down-move (watch for a bullish turn) · % is the close-to-close move over the previous 5 candles
+🟢 Bullish — spinning top at a 10-candle low, sell-off stalling (1):
+  • DOGE [Binance]  @ 0.0912  #8
 ```
 
-`#8` = CoinGecko market-cap rank; `[Bitget]` / `[MEXC]` / `[KuCoin]` = scanned
-there because Binance has no USDT pair for it.
+`#8` = CoinGecko market-cap rank; `[Binance]` / `[Bitget]` / `[MEXC]` / `[KuCoin]`
+= the exchange the coin was scanned on. Ranked coins come first in each section.
 
 ## Running locally
 

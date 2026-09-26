@@ -561,7 +561,7 @@ def log_signals(signals, run_date, path=SIGNALS_LOG):
                 "open": s["open"], "high": s["high"], "low": s["low"], "close": s["close"], "volume": s["volume"],
                 "vol_ratio": round(s["vol_ratio"], 3), "body_pct": round(s["body_pct"], 2),
                 "upper_pct": round(s["upper_pct"], 2), "lower_pct": round(s["lower_pct"], 2),
-                "doji": s["doji"], "swing": s["swing"],
+                "doji": s["doji"], "swing": s["swing"], "direction": signal_direction(s),
                 "move_pct": None if s["move_pct"] is None else round(s["move_pct"], 2),
                 "color": s["color"],
             }) + "\n")
@@ -607,48 +607,56 @@ def fmt_price(p):
     return f"{p:.8f}".rstrip("0").rstrip(".") if p < 1 else f"{p:,.4f}".rstrip("0").rstrip(".")
 
 
+def signal_direction(s):
+    """'bear' = spinning top at the swing high (or after an up-move when the swing filter is off):
+    the up-move is stalling. 'bull' = at the swing low / after a down-move: the sell-off is stalling."""
+    if s.get("swing") == "high":
+        return "bear"
+    if s.get("swing") == "low":
+        return "bull"
+    return "bear" if (s.get("move_pct") or 0) >= 0 else "bull"
+
+
 def fmt_signal(s):
+    """Telegram line: coin, exchange, price, rank — nothing else (owner's request 2026-09-26)."""
     e = s["entry"]
-    tag = "" if e["exchange"] == "BINANCE" else f" [{EXCHANGE_NAMES[e['exchange']]}]"
     rank = f"  #{e['rank']}" if e["rank"] else ""
-    doji = " (doji)" if s["doji"] else ""
-    if s["move_pct"] is None:
-        ctx = ""
-    else:
-        arrow = "↑" if s["move_pct"] > 0 else "↓"
-        ctx = f"  {arrow} {s['move_pct']:+.1f}% into it"
-    swing = {"high": f"  ⬆ {SWING_BARS}-bar high", "low": f"  ⬇ {SWING_BARS}-bar low",
-             "both": f"  ↕ {SWING_BARS}-bar high & low"}.get(s.get("swing"), "")
-    return (f"  • {e['base']}{tag}  vol {s['vol_ratio']:.1f}×  body {s['body_pct']:.0f}%{doji}{swing}{ctx}"
-            f"  @ {fmt_price(s['close'])}{rank}")
+    return f"  • {e['base']} [{EXCHANGE_NAMES[e['exchange']]}]  @ {fmt_price(s['close'])}{rank}"
 
 
-def render_message(date_str, candle_str, signals, stats, notes, skipped, errors, scanned):
+def fmt_signal_detail(s):
+    """Full detail for the job log (body, wicks, volume ratio, swing, move) — not sent to Telegram."""
+    e = s["entry"]
+    move = "" if s["move_pct"] is None else f" move {s['move_pct']:+.1f}%"
+    return (f"  {e['base']} [{EXCHANGE_NAMES[e['exchange']]}] {signal_direction(s)} vol {s['vol_ratio']:.1f}x "
+            f"body {s['body_pct']:.0f}%{' doji' if s['doji'] else ''} swing {s.get('swing')}{move}"
+            f" @ {fmt_price(s['close'])} #{e['rank'] or '-'}")
+
+
+def fmt_section(title, sigs):
+    if not sigs:
+        return f"{title}: none"
+    return "\n".join([f"{title} ({len(sigs)}):"] + [fmt_signal(s) for s in sigs])
+
+
+def render_message(date_str, candle_str, signals, stats, notes, errors, scanned):
+    """The Telegram text. Coverage gaps / skip counts / candle details go to the job log, not here."""
     head = f"🕯️ Spinning Top Scan — {TF_LABEL} — {date_str}"
-    sub = f"Candle checked: {candle_str} — closed candles only, the forming candle is ignored"
-    rules = (f"Rule: body ≤{BODY_MAX_PCT:g}% of range · wicks ≥{WICK_MIN_BODY:g}× body"
-             + (f" & ≥{WICK_MIN_PCT:g}% of range" if WICK_MIN_PCT > 0 else "")
-             + f" · volume ≥{VOL_MULT:g}× avg({VOL_LOOKBACK})"
-             + (f" · at a {SWING_BARS}-candle high or low" if SWING_BARS > 0 else ""))
-    nc = stats["not_covered"]
-    cov = (f"Universe: {scanned} pairs (Binance {stats['BINANCE']} · Bitget {stats['BITGET']} · "
-           f"MEXC {stats['MEXC']} · KuCoin {stats['KUCOIN']})"
-           f" · top-{TOP_N} not covered: {len(nc)} · too little history: {skipped['history']}"
-           f" · stale/halted: {skipped['stale']}")
+    sub = f"Candle checked: {candle_str}"
+    rules = (f"Rule: small body (≤{BODY_MAX_PCT:g}% of range), wicks on both sides, "
+             f"volume ≥{VOL_MULT:g}× the {VOL_LOOKBACK}-candle average"
+             + (f", at a {SWING_BARS}-candle high or low" if SWING_BARS > 0 else ""))
+    cov = (f"Universe: {scanned} pairs · Binance {stats['BINANCE']} · Bitget {stats['BITGET']} · "
+           f"MEXC {stats['MEXC']} · KuCoin {stats['KUCOIN']}")
     if errors:
         cov += " · errors: " + ", ".join(f"{EXCHANGE_NAMES[k]} {v}" for k, v in sorted(errors.items()))
+    bears = [s for s in signals if signal_direction(s) == "bear"]
+    bulls = [s for s in signals if signal_direction(s) == "bull"]
+    where_high = f"at a {SWING_BARS}-candle high" if SWING_BARS > 0 else "after an up-move"
+    where_low = f"at a {SWING_BARS}-candle low" if SWING_BARS > 0 else "after a down-move"
     parts = [head, sub, rules, cov] + notes
-    if signals:
-        parts.append("\n".join([f"Spinning tops on high volume ({len(signals)}), biggest volume first:"]
-                               + [fmt_signal(s) for s in signals]))
-        parts.append(f"⬆/⬇ = the candle set the highest high / lowest low of the previous {SWING_BARS} candles"
-                     " · ↑ = came after an up-move (watch for a bearish turn) · ↓ = after a down-move (watch for a bullish turn)"
-                     f" · % is the close-to-close move over the previous {TREND_BARS} candles")
-    else:
-        parts.append("Spinning tops on high volume: none")
-    if nc:
-        shown = ", ".join(nc[:40]) + (f" … +{len(nc) - 40} more" if len(nc) > 40 else "")
-        parts.append(f"Top-{TOP_N} coins without a USDT pair on Binance/Bitget/MEXC/KuCoin ({len(nc)}): {shown}")
+    parts.append(fmt_section(f"🔴 Bearish — spinning top {where_high}, up-move stalling", bears))
+    parts.append(fmt_section(f"🟢 Bullish — spinning top {where_low}, sell-off stalling", bulls))
     return "\n\n".join(parts)
 
 
@@ -674,11 +682,16 @@ def main():
 
     print(f"Scanning {len(universe)} pairs on {TIMEFRAME}...")
     signals, skipped, errors = scan(universe)
-    signals.sort(key=lambda s: -s["vol_ratio"])
+    signals.sort(key=lambda s: (s["entry"]["rank"] or 10 ** 6, -s["vol_ratio"]))   # ranked coins first
 
     candle_str = describe_candle(now)
-    text = render_message(date_str, candle_str, signals, stats, notes, skipped, errors, len(universe))
-    print(f"{len(signals)} signals")
+    text = render_message(date_str, candle_str, signals, stats, notes, errors, len(universe))
+    print(f"{len(signals)} signals | too little history {skipped['history']}, stale/halted {skipped['stale']}")
+    for s in signals:                                                      # full detail in the job log only
+        print(fmt_signal_detail(s))
+    if stats["not_covered"]:
+        print(f"  top-{TOP_N} coins without a USDT pair on any scanned exchange ({len(stats['not_covered'])}): "
+              + ", ".join(stats["not_covered"]))
 
     if DRY_RUN:
         print("\n----- DRY RUN: message that would be sent -----\n")

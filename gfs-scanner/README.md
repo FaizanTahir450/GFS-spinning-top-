@@ -41,12 +41,12 @@ The workflow then runs by itself every day at 00:15 UTC (05:15 PKT) and commits
 
 Rules: 🟢 M>60 W>60 D≤40 · 🔴 M<40 W<40 D≥60 · RSI 14 · M/W live, D closed
 
-Universe: 740 pairs (Binance 480 · Bitget 215 · MEXC 40 · KuCoin 5) · top-500 not covered: 50 · too little history: 90 · stale/halted: 3
+Universe: 670 pairs · Binance 396 · Bitget 213 · MEXC 56 · KuCoin 5
 
 🟢 Bullish GFS (M/W strong, D pulled back) (3):
-  • 🆕 SOL  M 68 · W 63 · D 35  @ 142.5  #6
-  • ETH  M 71 · W 66 · D 38  @ 3,905  #2  (4d)
-  • ABC [MEXC]  M 62 · W 61 · D 31  @ 0.0123  #412
+  • 🆕 SOL [Binance]  M 68 · W 63 · D 35  @ 142.5  #6
+  • ETH [Binance]  M 71 · W 66 · D 38  @ 3,905  #2  (4d)
+  • ABC [Bitget]  M 62 · W 61 · D 31  @ 0.0123  #412
 
 🔴 Bearish GFS (M/W weak, D bounced): none
 
@@ -54,8 +54,10 @@ Universe: 740 pairs (Binance 480 · Bitget 215 · MEXC 40 · KuCoin 5) · top-50
 ```
 
 🆕 = entered the list this run; `(4d)` = days it has been on the list;
-`#6` = CoinGecko market-cap rank; `[Bitget]` / `[MEXC]` / `[KuCoin]` = scanned
-there because Binance has no USDT pair for it.
+`#6` = CoinGecko market-cap rank; `[Binance]` / `[Bitget]` / `[MEXC]` / `[KuCoin]`
+= the exchange the coin was scanned on (Binance first, the others only when
+Binance has no USDT pair). Coins without any USDT pair and the "too little
+history" / "stale" counts are printed in the Actions job log, not in the message.
 
 ## Running locally
 

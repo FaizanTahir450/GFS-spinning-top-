@@ -570,11 +570,11 @@ def fmt_price(p):
 
 def fmt_match(m):
     e = m["entry"]
-    tag = "" if e["exchange"] == "BINANCE" else f" [{EXCHANGE_NAMES[e['exchange']]}]"
     new = "🆕 " if m["new"] else ""
     rank = f"  #{e['rank']}" if e["rank"] else ""
     age = "" if m["new"] else f"  ({m['days']}d)"
-    return (f"  • {new}{e['base']}{tag}  M {m['rsi_m']:.0f} · W {m['rsi_w']:.0f} · D {m['rsi_d']:.0f}"
+    return (f"  • {new}{e['base']} [{EXCHANGE_NAMES[e['exchange']]}]  "
+            f"M {m['rsi_m']:.0f} · W {m['rsi_w']:.0f} · D {m['rsi_d']:.0f}"
             f"  @ {fmt_price(m['close'])}{rank}{age}")
 
 
@@ -584,15 +584,13 @@ def fmt_section(title, matches):
     return "\n".join([f"{title} ({len(matches)}):"] + [fmt_match(m) for m in matches])
 
 
-def render_message(date_str, bulls, bears, left, stats, notes, skipped, errors, scanned):
+def render_message(date_str, bulls, bears, left, stats, notes, errors, scanned):
+    """The Telegram text. Coverage gaps / skip counts go to the job log, not here (owner's request 2026-09-26)."""
     head = f"📊 GFS RSI Scan — {date_str} (after the daily close)"
     rules = (f"Rules: 🟢 M>{BULL_M_MIN:g} W>{BULL_W_MIN:g} D≤{BULL_D_MAX:g} · "
              f"🔴 M<{BEAR_M_MAX:g} W<{BEAR_W_MAX:g} D≥{BEAR_D_MIN:g} · RSI {RSI_LENGTH} · M/W live, D closed")
-    nc = stats["not_covered"]
-    cov = (f"Universe: {scanned} pairs (Binance {stats['BINANCE']} · Bitget {stats['BITGET']} · "
-           f"MEXC {stats['MEXC']} · KuCoin {stats['KUCOIN']})"
-           f" · top-{TOP_N} not covered: {len(nc)} · too little history: {skipped['history']}"
-           f" · stale/halted: {skipped['stale']}")
+    cov = (f"Universe: {scanned} pairs · Binance {stats['BINANCE']} · Bitget {stats['BITGET']} · "
+           f"MEXC {stats['MEXC']} · KuCoin {stats['KUCOIN']}")
     if errors:
         cov += " · errors: " + ", ".join(f"{EXCHANGE_NAMES[k]} {v}" for k, v in sorted(errors.items()))
     parts = [head, rules, cov] + notes
@@ -600,9 +598,6 @@ def render_message(date_str, bulls, bears, left, stats, notes, skipped, errors, 
     parts.append(fmt_section("🔴 Bearish GFS (M/W weak, D bounced)", bears))
     if left:
         parts.append("↩️ Left since last run: " + ", ".join(left))
-    if nc:
-        shown = ", ".join(nc[:40]) + (f" … +{len(nc) - 40} more" if len(nc) > 40 else "")
-        parts.append(f"Top-{TOP_N} coins without a USDT pair on Binance/Bitget/MEXC/KuCoin ({len(nc)}): {shown}")
     return "\n\n".join(parts)
 
 
@@ -664,8 +659,12 @@ def main():
                 continue
             left.append(f"{info.get('symbol') or key} ({side})")
 
-    text = render_message(date_str, bulls, bears, left, stats, notes, skipped, errors, len(universe))
-    print(f"{len(bulls)} bullish, {len(bears)} bearish, {len(left)} left")
+    text = render_message(date_str, bulls, bears, left, stats, notes, errors, len(universe))
+    print(f"{len(bulls)} bullish, {len(bears)} bearish, {len(left)} left | "
+          f"too little history {skipped['history']}, stale/halted {skipped['stale']}")
+    if stats["not_covered"]:                                               # job log only, not in the message
+        print(f"  top-{TOP_N} coins without a USDT pair on any scanned exchange ({len(stats['not_covered'])}): "
+              + ", ".join(stats["not_covered"]))
 
     if DRY_RUN:
         print("\n----- DRY RUN: message that would be sent -----\n")
