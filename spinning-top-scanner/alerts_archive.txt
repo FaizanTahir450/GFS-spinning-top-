@@ -17,3 +17,24 @@ Spinning tops on high volume (6), biggest volume first:
 ⬆/⬇ = the candle set the highest high / lowest low of the previous 10 candles · ↑ = came after an up-move (watch for a bearish turn) · ↓ = after a down-move (watch for a bullish turn) · % is the close-to-close move over the previous 5 candles
 
 Top-500 coins without a USDT pair on Binance/Bitget/MEXC/KuCoin (51): LEO#18, GT#75, DRV#124, HASH#130, OHM#151, KOGE#174, SHFL#199, BORG#206, BTSE#215, META#233, OZO#249, GRX#252, RLB#253, BC#255, NXM#269, NOPAL#275, SHORT#300, ACRED#304, MAG7.SSI#305, UNT#309, BABYCLAW#?, KNTQ#311, YZY#325, EXOD#328, WM#336, GAL#356, APES#360, DIEM#366, PRIZE#381, TEMPLE#395, MGLOBAL#397, NILA#402, MF-ONE#406, ELG#413, MGLO#419, SWOP#423, MHORSE#427, NOXO#438, VBILL#447, FONQ#450 … +11 more
+
+==================================================
+
+🕯️ Spinning Top Scan — Daily — 27 Sep 2026
+
+Candle checked: daily candle of Sat 26 Sep 2026 UTC
+
+Rule: small body (≤30% of range), wicks on both sides, volume ≥1.5× the 20-candle average, at a 10-candle high or low
+
+Universe: 671 pairs · Binance 396 · Bitget 213 · MEXC 58 · KuCoin 4
+
+🔴 Bearish — spinning top at a 10-candle high, up-move stalling (6):
+  • AERO [Binance]  @ 0.8659  #88
+  • QTUM [Binance]  @ 1.032  #277
+  • ONT [Binance]  @ 0.05956  #438
+  • ARK [Binance]  @ 0.2614  #484
+  • CGPT [Binance]  @ 0.02274
+  • SNEK [Bitget]  @ 0.0006245
+
+🟢 Bullish — spinning top at a 10-candle low, sell-off stalling (1):
+  • NERO [Bitget]  @ 0.000668
