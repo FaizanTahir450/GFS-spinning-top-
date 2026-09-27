@@ -35,3 +35,32 @@ Universe: 671 pairs (Binance 396 · Bitget 213 · MEXC 58 · KuCoin 4) · top-50
   • 🆕 GUN  M 19 · W 37 · D 60  @ 0.0032
 
 Top-500 coins without a USDT pair on Binance/Bitget/MEXC/KuCoin (51): LEO#18, GT#75, DRV#124, HASH#130, OHM#151, KOGE#175, SHFL#199, BORG#206, BTSE#216, META#233, OZO#249, GRX#252, RLB#253, BC#255, NXM#269, NOPAL#275, SHORT#300, ACRED#304, MAG7.SSI#305, UNT#309, BABYCLAW#?, KNTQ#311, YZY#324, EXOD#328, WM#336, GAL#356, APES#360, DIEM#368, PRIZE#382, TEMPLE#395, MGLOBAL#398, NILA#402, MF-ONE#406, ELG#412, MGLO#418, SWOP#423, MHORSE#426, NOXO#438, VBILL#446, FONQ#450 … +11 more
+
+==================================================
+
+📊 GFS RSI Scan — 27 Sep 2026 (after the daily close)
+
+Rules: 🟢 M>60 W>60 D≤40 · 🔴 M<40 W<40 D≥60 · RSI 14 · M/W live, D closed
+
+Universe: 671 pairs · Binance 396 · Bitget 213 · MEXC 58 · KuCoin 4
+
+🟢 Bullish GFS (M/W strong, D pulled back): none
+
+🔴 Bearish GFS (M/W weak, D bounced) (15):
+  • 🆕 FLOW [Binance]  M 21 · W 37 · D 63  @ 0.03304  #454
+  • 🆕 GLMR [Binance]  M 22 · W 39 · D 60  @ 0.007312
+  • DATA [Bitget]  M 35 · W 34 · D 72  @ 0.23104  #336  (1d)
+  • ME [Binance]  M 2 · W 38 · D 67  @ 0.07956  (1d)
+  • AL [Bitget]  M 21 · W 27 · D 65  @ 0.002037  (1d)
+  • XTER [Bitget]  M 5 · W 37 · D 63  @ 0.01036  (1d)
+  • BB [Binance]  M 26 · W 34 · D 63  @ 0.01086  (1d)
+  • CORE [Bitget]  M 32 · W 34 · D 63  @ 0.02374  (1d)
+  • SAND [Binance]  M 37 · W 38 · D 62  @ 0.04493  #247  (1d)
+  • ERA [Binance]  M 2 · W 33 · D 62  @ 0.0697  (1d)
+  • UPC [Bitget]  M 32 · W 31 · D 61  @ 0.1703  (1d)
+  • BAR [Binance]  M 25 · W 36 · D 61  @ 0.283  (1d)
+  • BLUE [Bitget]  M 21 · W 38 · D 61  @ 0.01098  (1d)
+  • FUEL [Bitget]  M 1 · W 35 · D 61  @ 0.0008441  (1d)
+  • MOVE [Binance]  M 4 · W 34 · D 60  @ 0.009684  (1d)
+
+↩️ Left since last run: AMP (bear), BERA (bear), GUN (bear), LAZIO (bear), MOVR (bear), PARTI (bear), RESOLV (bear), SCR (bear), SPELL (bear), SXT (bear), TREE (bear), SONIC (bear), ZKL (bear)
