@@ -38,3 +38,26 @@ Universe: 671 pairs · Binance 396 · Bitget 213 · MEXC 58 · KuCoin 4
 
 🟢 Bullish — spinning top at a 10-candle low, sell-off stalling (1):
   • NERO [Bitget]  @ 0.000668
+
+==================================================
+
+🕯️ Spinning Top Scan — Daily — 28 Sep 2026
+
+Candle checked: daily candle of Sun 27 Sep 2026 UTC
+
+Rule: small body (≤30% of range), wicks on both sides, volume ≥1.5× the 20-candle average, at a 10-candle high or low
+
+Universe: 671 pairs · Binance 396 · Bitget 213 · MEXC 58 · KuCoin 4
+
+🔴 Bearish — spinning top at a 10-candle high, up-move stalling (9):
+  • GRAM [Binance]  @ 1.631  #30
+  • KITE [Binance]  @ 0.1536  #136
+  • Q [Bitget]  @ 0.0312751  #231
+  • TFUEL [Binance]  @ 0.01112  #342
+  • BABY [Binance]  @ 0.01413  #418
+  • IN [Bitget]  @ 0.03966
+  • SANTOS [Binance]  @ 0.538
+  • CITY [Binance]  @ 0.37
+  • ANKR [Binance]  @ 0.00518
+
+🟢 Bullish — spinning top at a 10-candle low, sell-off stalling: none
