@@ -61,3 +61,21 @@ Universe: 671 pairs · Binance 396 · Bitget 213 · MEXC 58 · KuCoin 4
   • ANKR [Binance]  @ 0.00518
 
 🟢 Bullish — spinning top at a 10-candle low, sell-off stalling: none
+
+==================================================
+
+🕯️ Spinning Top Scan — Weekly — 28 Sep 2026
+
+Candle checked: weekly candle that opened Mon 21 Sep 2026 (KuCoin weeks open on Thursdays)
+
+Rule: small body (≤30% of range), wicks on both sides, volume ≥1.5× the 20-candle average, at a 10-candle high or low
+
+Universe: 672 pairs · Binance 396 · Bitget 213 · MEXC 59 · KuCoin 4
+
+🔴 Bearish — spinning top at a 10-candle high, up-move stalling (4):
+  • AVAX [Binance]  @ 10.905  #26
+  • BGB [Bitget]  @ 2.0181  #68
+  • Q [Bitget]  @ 0.0312751  #233
+  • PROVE [Binance]  @ 0.2357
+
+🟢 Bullish — spinning top at a 10-candle low, sell-off stalling: none
