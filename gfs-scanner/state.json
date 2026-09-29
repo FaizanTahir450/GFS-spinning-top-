@@ -1,151 +1,31 @@
 {
   "bear": {
-    "BINANCE:ACMUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-09-28",
-      "symbol": "ACM"
-    },
-    "BINANCE:AIUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-09-28",
-      "symbol": "AI"
-    },
-    "BINANCE:BARUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-09-26",
-      "symbol": "BAR"
-    },
-    "BINANCE:BBUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-09-26",
-      "symbol": "BB"
-    },
-    "BINANCE:BERAUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-09-28",
-      "symbol": "BERA"
-    },
-    "BINANCE:CHZUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-09-28",
-      "symbol": "CHZ"
-    },
-    "BINANCE:ERAUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-09-26",
-      "symbol": "ERA"
-    },
-    "BINANCE:FLOWUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-09-27",
-      "symbol": "FLOW"
-    },
     "BINANCE:GLMRUSDT": {
       "exchange": "BINANCE",
       "first_seen": "2026-09-27",
       "symbol": "GLMR"
     },
-    "BINANCE:JUVUSDT": {
+    "BINANCE:PARTIUSDT": {
       "exchange": "BINANCE",
-      "first_seen": "2026-09-28",
-      "symbol": "JUV"
-    },
-    "BINANCE:MEUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-09-26",
-      "symbol": "ME"
-    },
-    "BINANCE:RESOLVUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-09-28",
-      "symbol": "RESOLV"
-    },
-    "BINANCE:RONINUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-09-28",
-      "symbol": "RONIN"
-    },
-    "BINANCE:SAHARAUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-09-28",
-      "symbol": "SAHARA"
-    },
-    "BINANCE:SANDUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-09-26",
-      "symbol": "SAND"
-    },
-    "BINANCE:SCRUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-09-28",
-      "symbol": "SCR"
+      "first_seen": "2026-09-29",
+      "symbol": "PARTI"
     },
     "BINANCE:SPELLUSDT": {
       "exchange": "BINANCE",
       "first_seen": "2026-09-28",
       "symbol": "SPELL"
     },
-    "BINANCE:SXTUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-09-28",
-      "symbol": "SXT"
-    },
-    "BINANCE:TREEUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-09-28",
-      "symbol": "TREE"
-    },
-    "BINANCE:WCTUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-09-28",
-      "symbol": "WCT"
-    },
-    "BITGET:ALUSDT": {
-      "exchange": "BITGET",
-      "first_seen": "2026-09-26",
-      "symbol": "AL"
-    },
-    "BITGET:BLUEUSDT": {
-      "exchange": "BITGET",
-      "first_seen": "2026-09-26",
-      "symbol": "BLUE"
-    },
-    "BITGET:COREUSDT": {
-      "exchange": "BITGET",
-      "first_seen": "2026-09-26",
-      "symbol": "CORE"
-    },
     "BITGET:DATAUSDT": {
       "exchange": "BITGET",
       "first_seen": "2026-09-26",
       "symbol": "DATA"
     },
-    "BITGET:LATUSDT": {
-      "exchange": "BITGET",
-      "first_seen": "2026-09-28",
-      "symbol": "LAT"
-    },
-    "BITGET:SONICUSDT": {
-      "exchange": "BITGET",
-      "first_seen": "2026-09-28",
-      "symbol": "SONIC"
-    },
     "BITGET:UPCUSDT": {
       "exchange": "BITGET",
       "first_seen": "2026-09-26",
       "symbol": "UPC"
-    },
-    "BITGET:XTERUSDT": {
-      "exchange": "BITGET",
-      "first_seen": "2026-09-26",
-      "symbol": "XTER"
-    },
-    "BITGET:ZKLUSDT": {
-      "exchange": "BITGET",
-      "first_seen": "2026-09-28",
-      "symbol": "ZKL"
     }
   },
   "bull": {},
-  "updated": "2026-09-28T05:29:16+00:00"
+  "updated": "2026-09-29T05:48:52+00:00"
 }

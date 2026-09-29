@@ -107,3 +107,22 @@ Universe: 672 pairs · Binance 396 · Bitget 213 · MEXC 59 · KuCoin 4
   • BLUE [Bitget]  M 21 · W 37 · D 61  @ 0.01102  (2d)
 
 ↩️ Left since last run: MOVE (bear), FUEL (bear)
+
+==================================================
+
+📊 GFS RSI Scan — 29 Sep 2026 (after the daily close)
+
+Rules: 🟢 M>60 W>60 D≤40 · 🔴 M<40 W<40 D≥60 · RSI 14 · M/W live, D closed
+
+Universe: 670 pairs · Binance 396 · Bitget 213 · MEXC 57 · KuCoin 4
+
+🟢 Bullish GFS (M/W strong, D pulled back): none
+
+🔴 Bearish GFS (M/W weak, D bounced) (5):
+  • 🆕 PARTI [Binance]  M 25 · W 37 · D 61  @ 0.0272
+  • UPC [Bitget]  M 32 · W 33 · D 72  @ 0.1911  (3d)
+  • DATA [Bitget]  M 35 · W 34 · D 62  @ 0.22234  #342  (3d)
+  • SPELL [Binance]  M 22 · W 38 · D 61  @ 0.0000987  (1d)
+  • GLMR [Binance]  M 22 · W 36 · D 60  @ 0.007548  (2d)
+
+↩️ Left since last run: ACM (bear), AI (bear), BAR (bear), BB (bear), BERA (bear), CHZ (bear), ERA (bear), FLOW (bear), JUV (bear), ME (bear), RESOLV (bear), RONIN (bear), SAHARA (bear), SAND (bear), SCR (bear), SXT (bear), TREE (bear), WCT (bear), AL (bear), BLUE (bear), CORE (bear), LAT (bear), SONIC (bear), XTER (bear), ZKL (bear)
