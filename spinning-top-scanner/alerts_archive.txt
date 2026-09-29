@@ -79,3 +79,27 @@ Universe: 672 pairs · Binance 396 · Bitget 213 · MEXC 59 · KuCoin 4
   • PROVE [Binance]  @ 0.2357
 
 🟢 Bullish — spinning top at a 10-candle low, sell-off stalling: none
+
+==================================================
+
+🕯️ Spinning Top Scan — Daily — 29 Sep 2026
+
+Candle checked: daily candle of Mon 28 Sep 2026 UTC
+
+Rule: small body (≤30% of range), wicks on both sides, volume ≥1.5× the 20-candle average, at a 10-candle high or low
+
+Universe: 670 pairs · Binance 396 · Bitget 213 · MEXC 57 · KuCoin 4
+
+🔴 Bearish — spinning top at a 10-candle high, up-move stalling (10):
+  • BTW [Bitget]  @ 1.1134  #39
+  • XDC [Bitget]  @ 0.03456  #97
+  • MON [Bitget]  @ 0.02851  #143
+  • SOON [Bitget]  @ 0.309  #286
+  • DGB [Binance]  @ 0.00465  #328
+  • LINEA [Binance]  @ 0.002949  #373
+  • AZTEC [MEXC]  @ 0.01912  #451
+  • PARTI [Binance]  @ 0.0272
+  • BNT [Binance]  @ 0.3579
+  • PRIME [Bitget]  @ 0.256
+
+🟢 Bullish — spinning top at a 10-candle low, sell-off stalling: none
