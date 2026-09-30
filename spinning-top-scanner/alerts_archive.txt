@@ -103,3 +103,25 @@ Universe: 670 pairs · Binance 396 · Bitget 213 · MEXC 57 · KuCoin 4
   • PRIME [Bitget]  @ 0.256
 
 🟢 Bullish — spinning top at a 10-candle low, sell-off stalling: none
+
+==================================================
+
+🕯️ Spinning Top Scan — Daily — 30 Sep 2026
+
+Candle checked: daily candle of Tue 29 Sep 2026 UTC
+
+Rule: small body (≤30% of range), wicks on both sides, volume ≥1.5× the 20-candle average, at a 10-candle high or low
+
+Universe: 672 pairs · Binance 396 · Bitget 213 · MEXC 58 · KuCoin 5
+
+🔴 Bearish — spinning top at a 10-candle high, up-move stalling (4):
+  • CRO [MEXC]  @ 0.06811  #37
+  • CRV [Binance]  @ 0.3811  #103
+  • SYRUP [Binance]  @ 0.2343  #163
+  • VELO [Bitget]  @ 0.005086  #313
+
+🟢 Bullish — spinning top at a 10-candle low, sell-off stalling (4):
+  • EDGE [Bitget]  @ 0.5281  #196
+  • YB [Binance]  @ 0.0892
+  • FOGO [Binance]  @ 0.00539
+  • MOVE [Binance]  @ 0.008942
