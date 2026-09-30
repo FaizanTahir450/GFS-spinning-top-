@@ -5,20 +5,10 @@
       "first_seen": "2026-09-27",
       "symbol": "GLMR"
     },
-    "BINANCE:PARTIUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-09-29",
-      "symbol": "PARTI"
-    },
-    "BINANCE:SPELLUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-09-28",
-      "symbol": "SPELL"
-    },
-    "BITGET:DATAUSDT": {
+    "BITGET:SONICUSDT": {
       "exchange": "BITGET",
-      "first_seen": "2026-09-26",
-      "symbol": "DATA"
+      "first_seen": "2026-09-30",
+      "symbol": "SONIC"
     },
     "BITGET:UPCUSDT": {
       "exchange": "BITGET",
@@ -27,5 +17,5 @@
     }
   },
   "bull": {},
-  "updated": "2026-09-29T05:48:52+00:00"
+  "updated": "2026-09-30T05:38:06+00:00"
 }
