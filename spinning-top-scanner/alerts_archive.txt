@@ -125,3 +125,20 @@ Universe: 672 pairs · Binance 396 · Bitget 213 · MEXC 58 · KuCoin 5
   • YB [Binance]  @ 0.0892
   • FOGO [Binance]  @ 0.00539
   • MOVE [Binance]  @ 0.008942
+
+==================================================
+
+🕯️ Spinning Top Scan — Daily — 01 Oct 2026
+
+Candle checked: daily candle of Wed 30 Sep 2026 UTC
+
+Rule: small body (≤30% of range), wicks on both sides, volume ≥1.5× the 20-candle average, at a 10-candle high or low
+
+Universe: 669 pairs · Binance 396 · Bitget 214 · MEXC 55 · KuCoin 4
+
+🔴 Bearish — spinning top at a 10-candle high, up-move stalling (1):
+  • TRB [Binance]  @ 21.2  #431
+
+🟢 Bullish — spinning top at a 10-candle low, sell-off stalling (2):
+  • M [Bitget]  @ 1.0387  #48
+  • LIT [Bitget]  @ 3.9482  #80
