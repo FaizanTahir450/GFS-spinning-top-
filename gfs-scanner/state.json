@@ -1,9 +1,29 @@
 {
   "bear": {
-    "BITGET:SONICUSDT": {
-      "exchange": "BITGET",
-      "first_seen": "2026-09-30",
-      "symbol": "SONIC"
+    "BINANCE:BARUSDT": {
+      "exchange": "BINANCE",
+      "first_seen": "2026-10-02",
+      "symbol": "BAR"
+    },
+    "BINANCE:MOVEUSDT": {
+      "exchange": "BINANCE",
+      "first_seen": "2026-10-02",
+      "symbol": "MOVE"
+    },
+    "BINANCE:SANDUSDT": {
+      "exchange": "BINANCE",
+      "first_seen": "2026-10-02",
+      "symbol": "SAND"
+    },
+    "BINANCE:SPELLUSDT": {
+      "exchange": "BINANCE",
+      "first_seen": "2026-10-02",
+      "symbol": "SPELL"
+    },
+    "BINANCE:SXTUSDT": {
+      "exchange": "BINANCE",
+      "first_seen": "2026-10-02",
+      "symbol": "SXT"
     },
     "BITGET:UPCUSDT": {
       "exchange": "BITGET",
@@ -12,5 +32,5 @@
     }
   },
   "bull": {},
-  "updated": "2026-10-01T06:01:34+00:00"
+  "updated": "2026-10-02T05:43:42+00:00"
 }
