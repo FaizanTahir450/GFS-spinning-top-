@@ -1,36 +1,16 @@
 {
   "bear": {
-    "BINANCE:BARUSDT": {
+    "BINANCE:GLMRUSDT": {
       "exchange": "BINANCE",
-      "first_seen": "2026-10-02",
-      "symbol": "BAR"
+      "first_seen": "2026-10-03",
+      "symbol": "GLMR"
     },
-    "BINANCE:MOVEUSDT": {
+    "BINANCE:SCRUSDT": {
       "exchange": "BINANCE",
-      "first_seen": "2026-10-02",
-      "symbol": "MOVE"
-    },
-    "BINANCE:SANDUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-10-02",
-      "symbol": "SAND"
-    },
-    "BINANCE:SPELLUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-10-02",
-      "symbol": "SPELL"
-    },
-    "BINANCE:SXTUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-10-02",
-      "symbol": "SXT"
-    },
-    "BITGET:UPCUSDT": {
-      "exchange": "BITGET",
-      "first_seen": "2026-09-26",
-      "symbol": "UPC"
+      "first_seen": "2026-10-03",
+      "symbol": "SCR"
     }
   },
   "bull": {},
-  "updated": "2026-10-02T05:43:42+00:00"
+  "updated": "2026-10-03T05:23:39+00:00"
 }
