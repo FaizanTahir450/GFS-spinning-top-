@@ -195,3 +195,22 @@ Universe: 667 pairs · Binance 396 · Bitget 214 · MEXC 53 · KuCoin 4
   • 🆕 GLMR [Binance]  M 22 · W 40 · D 63  @ 0.00865
 
 ↩️ Left since last run: BAR (bear), MOVE (bear), SAND (bear), SPELL (bear), SXT (bear), UPC (bear)
+
+==================================================
+
+📊 GFS RSI Scan — 04 Oct 2026 (after the daily close)
+
+Rules: 🟢 M>60 W>60 D≤40 · 🔴 M<40 W<40 D≥60 · RSI 14 · M/W live, D closed
+
+Universe: 667 pairs · Binance 396 · Bitget 214 · MEXC 53 · KuCoin 4
+
+🟢 Bullish GFS (M/W strong, D pulled back): none
+
+🔴 Bearish GFS (M/W weak, D bounced) (5):
+  • 🆕 PARTI [Binance]  M 25 · W 38 · D 63  @ 0.0283
+  • 🆕 ME [Binance]  M 2 · W 37 · D 62  @ 0.07843
+  • 🆕 MOVE [Binance]  M 4 · W 36 · D 61  @ 0.010128
+  • 🆕 FLOW [Binance]  M 21 · W 37 · D 61  @ 0.03307  #456
+  • 🆕 SXT [Binance]  M 15 · W 37 · D 61  @ 0.00972
+
+↩️ Left since last run: GLMR (bear), SCR (bear)
