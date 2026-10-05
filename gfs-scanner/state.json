@@ -1,14 +1,14 @@
 {
   "bear": {
-    "BINANCE:FLOWUSDT": {
+    "BINANCE:DYMUSDT": {
       "exchange": "BINANCE",
-      "first_seen": "2026-10-04",
-      "symbol": "FLOW"
+      "first_seen": "2026-10-05",
+      "symbol": "DYM"
     },
-    "BINANCE:MEUSDT": {
+    "BINANCE:GUNUSDT": {
       "exchange": "BINANCE",
-      "first_seen": "2026-10-04",
-      "symbol": "ME"
+      "first_seen": "2026-10-05",
+      "symbol": "GUN"
     },
     "BINANCE:MOVEUSDT": {
       "exchange": "BINANCE",
@@ -20,12 +20,22 @@
       "first_seen": "2026-10-04",
       "symbol": "PARTI"
     },
-    "BINANCE:SXTUSDT": {
+    "BINANCE:SCRUSDT": {
       "exchange": "BINANCE",
-      "first_seen": "2026-10-04",
-      "symbol": "SXT"
+      "first_seen": "2026-10-05",
+      "symbol": "SCR"
+    },
+    "BITGET:SONICUSDT": {
+      "exchange": "BITGET",
+      "first_seen": "2026-10-05",
+      "symbol": "SONIC"
+    },
+    "BITGET:UPCUSDT": {
+      "exchange": "BITGET",
+      "first_seen": "2026-10-05",
+      "symbol": "UPC"
     }
   },
   "bull": {},
-  "updated": "2026-10-04T05:59:36+00:00"
+  "updated": "2026-10-05T05:47:32+00:00"
 }
