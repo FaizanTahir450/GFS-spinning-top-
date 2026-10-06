@@ -5,20 +5,10 @@
       "first_seen": "2026-10-05",
       "symbol": "DYM"
     },
-    "BINANCE:GUNUSDT": {
+    "BINANCE:MEUSDT": {
       "exchange": "BINANCE",
-      "first_seen": "2026-10-05",
-      "symbol": "GUN"
-    },
-    "BINANCE:MOVEUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-10-04",
-      "symbol": "MOVE"
-    },
-    "BINANCE:PARTIUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-10-04",
-      "symbol": "PARTI"
+      "first_seen": "2026-10-06",
+      "symbol": "ME"
     },
     "BINANCE:SCRUSDT": {
       "exchange": "BINANCE",
@@ -29,13 +19,8 @@
       "exchange": "BITGET",
       "first_seen": "2026-10-05",
       "symbol": "SONIC"
-    },
-    "BITGET:UPCUSDT": {
-      "exchange": "BITGET",
-      "first_seen": "2026-10-05",
-      "symbol": "UPC"
     }
   },
   "bull": {},
-  "updated": "2026-10-05T05:47:32+00:00"
+  "updated": "2026-10-06T06:27:01+00:00"
 }
