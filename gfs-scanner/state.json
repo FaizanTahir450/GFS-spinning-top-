@@ -1,31 +1,16 @@
 {
   "bear": {
-    "BINANCE:FLOWUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-10-07",
-      "symbol": "FLOW"
-    },
     "BINANCE:JUVUSDT": {
       "exchange": "BINANCE",
       "first_seen": "2026-10-07",
       "symbol": "JUV"
     },
-    "BITGET:DMCUSDT": {
+    "BITGET:CUDISUSDT": {
       "exchange": "BITGET",
-      "first_seen": "2026-10-07",
-      "symbol": "DMC"
-    },
-    "BITGET:SONICUSDT": {
-      "exchange": "BITGET",
-      "first_seen": "2026-10-05",
-      "symbol": "SONIC"
-    },
-    "BITGET:ZKLUSDT": {
-      "exchange": "BITGET",
-      "first_seen": "2026-10-07",
-      "symbol": "ZKL"
+      "first_seen": "2026-10-08",
+      "symbol": "CUDIS"
     }
   },
   "bull": {},
-  "updated": "2026-10-07T06:06:13+00:00"
+  "updated": "2026-10-08T06:10:53+00:00"
 }
