@@ -288,3 +288,17 @@ Universe: 663 pairs · Binance 395 · Bitget 213 · MEXC 51 · KuCoin 4
   • JUV [Binance]  M 31 · W 37 · D 64  @ 0.333  (1d)
 
 ↩️ Left since last run: FLOW (bear), DMC (bear), SONIC (bear), ZKL (bear)
+
+==================================================
+
+📊 GFS RSI Scan — 09 Oct 2026 (after the daily close)
+
+Rules: 🟢 M>60 W>60 D≤40 · 🔴 M<40 W<40 D≥60 · RSI 14 · M/W live, D closed
+
+Universe: 660 pairs · Binance 395 · Bitget 213 · MEXC 48 · KuCoin 4
+
+🟢 Bullish GFS (M/W strong, D pulled back): none
+
+🔴 Bearish GFS (M/W weak, D bounced): none
+
+↩️ Left since last run: JUV (bear), CUDIS (bear)
