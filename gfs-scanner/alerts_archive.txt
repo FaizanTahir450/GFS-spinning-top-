@@ -302,3 +302,16 @@ Universe: 660 pairs · Binance 395 · Bitget 213 · MEXC 48 · KuCoin 4
 🔴 Bearish GFS (M/W weak, D bounced): none
 
 ↩️ Left since last run: JUV (bear), CUDIS (bear)
+
+==================================================
+
+📊 GFS RSI Scan — 10 Oct 2026 (after the daily close)
+
+Rules: 🟢 M>60 W>60 D≤40 · 🔴 M<40 W<40 D≥60 · RSI 14 · M/W live, D closed
+
+Universe: 662 pairs · Binance 395 · Bitget 213 · MEXC 50 · KuCoin 4
+
+🟢 Bullish GFS (M/W strong, D pulled back) (1):
+  • 🆕 VVV [MEXC]  M 66 · W 61 · D 40  @ 22.0665  #75
+
+🔴 Bearish GFS (M/W weak, D bounced): none
