@@ -1,16 +1,16 @@
 {
   "bear": {
-    "BINANCE:ERAUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-10-11",
-      "symbol": "ERA"
+    "BITGET:FUELUSDT": {
+      "exchange": "BITGET",
+      "first_seen": "2026-10-13",
+      "symbol": "FUEL"
     },
-    "BINANCE:JUVUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-10-12",
-      "symbol": "JUV"
+    "BITGET:ZKLUSDT": {
+      "exchange": "BITGET",
+      "first_seen": "2026-10-13",
+      "symbol": "ZKL"
     }
   },
   "bull": {},
-  "updated": "2026-10-12T06:03:54+00:00"
+  "updated": "2026-10-13T06:51:21+00:00"
 }
