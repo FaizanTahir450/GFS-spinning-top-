@@ -4,13 +4,8 @@
       "exchange": "BITGET",
       "first_seen": "2026-10-13",
       "symbol": "FUEL"
-    },
-    "BITGET:ZKLUSDT": {
-      "exchange": "BITGET",
-      "first_seen": "2026-10-13",
-      "symbol": "ZKL"
     }
   },
   "bull": {},
-  "updated": "2026-10-13T06:51:21+00:00"
+  "updated": "2026-10-14T04:59:44+00:00"
 }
