@@ -390,3 +390,17 @@ Universe: 664 pairs · Binance 396 · Bitget 213 · MEXC 52 · KuCoin 3
   • 🆕 ZKL [Bitget]  M 27 · W 32 · D 62  @ 0.0002863
 
 ↩️ Left since last run: FUEL (bear)
+
+==================================================
+
+📊 GFS RSI Scan — 16 Oct 2026 (after the daily close)
+
+Rules: 🟢 M>60 W>60 D≤40 · 🔴 M<40 W<40 D≥60 · RSI 14 · M/W live, D closed
+
+Universe: 666 pairs · Binance 396 · Bitget 213 · MEXC 54 · KuCoin 3
+
+🟢 Bullish GFS (M/W strong, D pulled back): none
+
+🔴 Bearish GFS (M/W weak, D bounced): none
+
+↩️ Left since last run: ZKL (bear)
