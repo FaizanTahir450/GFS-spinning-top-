@@ -1,0 +1,62 @@
+name: GFS PSX RSI Scan
+
+on:
+  schedule:
+    - cron: "17 13 * * 1-5"  # Mon-Fri 13:17 UTC = 18:17 PKT, after the PSX close (15:30 Mon-Thu / 16:30 Fri); off the top of the hour as GitHub advises
+  workflow_dispatch:         # manual run
+    inputs:
+      dry_run:
+        description: "Dry run - print the message in the job log, send nothing, write nothing"
+        type: boolean
+        default: false
+
+# Allow the job to commit state.json / archive / matches log back to the repo.
+permissions:
+  contents: write
+
+# Shared with the GFS and spinning-top workflows so the commit-backs never race.
+concurrency:
+  group: gfs-spinning-top-scan
+  cancel-in-progress: false
+
+defaults:
+  run:
+    working-directory: gfs-psx-scanner
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45       # one screener request; up to 30 min more if the screener is late on a trading day
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main           # a queued run (cron double-fire) starts from the tip, not the SHA it was triggered at
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scanner
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DRY_RUN: ${{ inputs.dry_run == true && '1' || '0' }}
+        run: python scanner.py
+
+      - name: Commit state, archive and matches log
+        if: ${{ inputs.dry_run != true }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          for f in state.json alerts_archive.txt matches.jsonl; do
+            [ -f "$f" ] && git add "$f"
+          done
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "chore: GFS PSX scan - update state + archive [skip ci]"
+            git push || (git pull --rebase && git push)
+          fi
