@@ -9,3 +9,17 @@ Universe: 484 PSX equities · 458 scanned
 🔴 Bearish GFS (M/W weak, D bounced) (2):
   • 🆕 ATBA [PSX]  M 39 · W 38 · D 68  @ 177.24  #201
   • 🆕 SPWL [PSX]  M 32 · W 40 · D 63  @ 8.31  #257
+
+==================================================
+
+📊 GFS RSI Scan — PSX — 20 Oct 2026 (after the close)
+
+Rules: 🟢 M>60 W>60 D≤40 · 🔴 M<40 W<40 D≥60 · RSI 14 · M/W live, D closed
+
+Universe: 484 PSX equities · 458 scanned
+
+🟢 Bullish GFS (M/W strong, D pulled back): none
+
+🔴 Bearish GFS (M/W weak, D bounced): none
+
+↩️ Left since last run: ATBA (bear), SPWL (bear)
