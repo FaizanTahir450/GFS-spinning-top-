@@ -48,3 +48,17 @@ Universe: 484 PSX equities · 458 scanned
   • 🆕 MSOT [PSX]  M 78 · W 62 · D 38  @ 173.98  #151
 
 🔴 Bearish GFS (M/W weak, D bounced): none
+
+==================================================
+
+📊 GFS RSI Scan — PSX — 23 Oct 2026 (after the close)
+
+Rules: 🟢 M>60 W>60 D≤40 · 🔴 M<40 W<40 D≥60 · RSI 14 · M/W live, D closed
+
+Universe: 484 PSX equities · 457 scanned
+
+🟢 Bullish GFS (M/W strong, D pulled back): none
+
+🔴 Bearish GFS (M/W weak, D bounced): none
+
+↩️ Left since last run: MSOT (bull)
