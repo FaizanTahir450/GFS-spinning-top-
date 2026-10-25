@@ -500,3 +500,17 @@ Universe: 657 pairs · Binance 395 · Bitget 209 · MEXC 49 · KuCoin 4
 🟢 Bullish GFS (M/W strong, D pulled back): none
 
 🔴 Bearish GFS (M/W weak, D bounced): none
+
+==================================================
+
+📊 GFS RSI Scan — 25 Oct 2026 (after the daily close)
+
+Rules: 🟢 M>60 W>60 D≤40 · 🔴 M<40 W<40 D≥60 · RSI 14 · M/W live, D closed
+
+Universe: 656 pairs · Binance 395 · Bitget 209 · MEXC 48 · KuCoin 4
+
+🟢 Bullish GFS (M/W strong, D pulled back) (1):
+  • 🆕 WBT [MEXC]  M 76 · W 62 · D 38  @ 77.538  #15
+
+🔴 Bearish GFS (M/W weak, D bounced) (1):
+  • 🆕 ERA [Binance]  M 3 · W 38 · D 60  @ 0.0792
