@@ -119,3 +119,4 @@
 {"date": "2026-10-15", "side": "bear", "exchange": "BITGET", "pair": "ZKLUSDT", "symbol": "ZKL", "rank": null, "rsi_m": 27.18, "rsi_w": 32.36, "rsi_d": 61.77, "close": 0.0002863, "candle_ts": 1791936000000, "first_seen": "2026-10-15", "new": true}
 {"date": "2026-10-25", "side": "bull", "exchange": "MEXC", "pair": "WBTUSDT", "symbol": "WBT", "rank": 15, "rsi_m": 76.17, "rsi_w": 62.31, "rsi_d": 38.1, "close": 77.538, "candle_ts": 1792800000000, "first_seen": "2026-10-25", "new": true}
 {"date": "2026-10-25", "side": "bear", "exchange": "BINANCE", "pair": "ERAUSDT", "symbol": "ERA", "rank": null, "rsi_m": 2.78, "rsi_w": 37.99, "rsi_d": 60.05, "close": 0.0792, "candle_ts": 1792800000000, "first_seen": "2026-10-25", "new": true}
+{"date": "2026-10-26", "side": "bull", "exchange": "MEXC", "pair": "WBTUSDT", "symbol": "WBT", "rank": 15, "rsi_m": 74.96, "rsi_w": 60.86, "rsi_d": 37.82, "close": 77.44, "candle_ts": 1792886400000, "first_seen": "2026-10-25", "new": false}

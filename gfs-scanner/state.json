@@ -1,11 +1,5 @@
 {
-  "bear": {
-    "BINANCE:ERAUSDT": {
-      "exchange": "BINANCE",
-      "first_seen": "2026-10-25",
-      "symbol": "ERA"
-    }
-  },
+  "bear": {},
   "bull": {
     "MEXC:WBTUSDT": {
       "exchange": "MEXC",
@@ -13,5 +7,5 @@
       "symbol": "WBT"
     }
   },
-  "updated": "2026-10-25T04:47:13+00:00"
+  "updated": "2026-10-26T04:52:45+00:00"
 }
