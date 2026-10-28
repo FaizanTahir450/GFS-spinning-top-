@@ -86,3 +86,15 @@ Universe: 485 PSX equities · 457 scanned
 🟢 Bullish GFS (M/W strong, D pulled back): none
 
 🔴 Bearish GFS (M/W weak, D bounced): none
+
+==================================================
+
+📊 GFS RSI Scan — PSX — 28 Oct 2026 (after the close)
+
+Rules: 🟢 M>60 W>60 D≤40 · 🔴 M<40 W<40 D≥60 · RSI 14 · M/W live, D closed
+
+Universe: 485 PSX equities · 457 scanned
+
+🟢 Bullish GFS (M/W strong, D pulled back): none
+
+🔴 Bearish GFS (M/W weak, D bounced): none
